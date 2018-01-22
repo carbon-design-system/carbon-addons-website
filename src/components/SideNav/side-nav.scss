@@ -1,0 +1,16 @@
+.side-nav {
+  &.bx--interior-left-nav {
+    top: 0;
+    overflow: auto;
+    border-right: none;
+    z-index: 7000;
+
+    &.bx--interior-left-nav--collapsed {
+      width: 0;
+    }
+  }
+
+  .bx--interior-left-nav-collapse {
+    display: none;
+  }
+}

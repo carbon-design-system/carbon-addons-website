@@ -1,0 +1,11 @@
+# Ignore generated folders
+/node_modules
+/es
+/lib
+/scss
+
+# Logs
+*.log
+
+# Coverage directory used by tools like Istanbul
+coverage

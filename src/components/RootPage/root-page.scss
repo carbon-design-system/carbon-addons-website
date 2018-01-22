@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  margin-left: 0;
+  transition: $transition--base ease;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include breakpoint('bp--md--major') {
+    margin-left: $width--side-nav;
+    width: calc(100% - 200px);
+  }
+
+  &--expanded {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  main {
+    &:focus {
+      outline: none;
+    }
+  }
+}

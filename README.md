@@ -9,7 +9,7 @@ This repository provides a collection of [React](https://facebook.github.io/reac
 ### Getting Started
 
 ```sh
-> npm install -S carbon-components carbon-components-react carbon-addons-cloud carbon-icons classnames markdown-it react react-copy-to-clipboard react-dom react-ga
+> npm install -S @carbon/addons-website carbon-components carbon-components-react carbon-addons-cloud carbon-icons classnames markdown-it react react-copy-to-clipboard react-dom react-ga
 ```
 
 1. These components require the use of a module bundler, e.g. [Webpack](http://webpack.github.io/docs/tutorials/getting-started/) in your project. See our [`webpack.config.js`](/.storybook/webpack.config.js) for an example configuration.
@@ -32,9 +32,9 @@ We recommend the use of [React Storybook](https://github.com/storybooks/react-st
 
 2. Open browser to `http://localhost:9000/`.
 
-3. Develop components in their respective folders (`carbon-addons-design-system-website/src/components`).
+3. Develop components in their respective folders (`carbon-addons-website/src/components`).
 
-4. Write stories for your components (`carbon-addons-design-system-website/src/components/**/*-story.js`).
+4. Write stories for your components (`carbon-addons-website/src/components/**/*-story.js`).
 
 ## Contributing
 

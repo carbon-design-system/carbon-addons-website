@@ -1,0 +1,4 @@
+{
+  "*.js": ["prettier", "lint", "git add"],
+  "*.{css,scss}": ["prettier", "git add"]
+}
