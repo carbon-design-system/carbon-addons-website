@@ -6,6 +6,7 @@
   "module": "es/index.js",
   "scripts": {
     "build": "node scripts/build.js",
+    "ci-check": "yarn prettier:diff && yarn lint",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "lint": "eslint src .storybook",
     "precommit": "lint-staged",
@@ -95,5 +96,64 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog-components"
     }
+  },
+  "babel": {
+    "presets": [
+      "./config/babel-preset",
+      "react"
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-object-rest-spread"
+    ]
+  },
+  "eslintIgnore": [".storybook/prism.js"],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/components/**/*.js",
+      "!src/components/**/*-story.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "html"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/jest/setup.js"
+    ],
+    "testMatch": [
+      "<rootDir>/**/__tests__/**/*.js?(x)",
+      "<rootDir>/**/?(*-)(test).js?(x)"
+    ],
+    "testURL": "http://localhost",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/config/",
+      "/lib/",
+      "/es/"
+    ],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "prettier": {
+    "jsxBracketSameLine": true,
+    "printWidth": 130,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
+  },
+  "lint-staged": {
+    "*.js": ["prettier", "lint", "git add"],
+    "*.{css,scss}": ["prettier", "git add"]
   }
 }

@@ -85,7 +85,7 @@ If your issue appears to be a bug, and hasn't been reported, open a new issue. H
 
   **Note:** the optional commit -a command line option will automatically "add" and "rm" edited files. See [Close a commit via commit message](https://help.github.com/articles/closing-issues-via-commit-messages/) and [writing good commit messages](https://github.com/erlang/otp/wiki/Writing-good-commit-messages) for more details on commit messages.
 
-6. Once ready for feedback from other contributors and maintainers, **push your commits to your fork** (be sure to run `npm run check` before pushing, to make sure your code passes linting and unit tests):
+6. Once ready for feedback from other contributors and maintainers, **push your commits to your fork** (be sure to run `yarn run check` before pushing, to make sure your code passes linting and unit tests):
 
   ```
   $ git push origin { YOUR_BRANCH_NAME }
@@ -119,13 +119,13 @@ Feel free to edit/write components in your own style but be wary that we may ask
 
 We enforce some style rules for code in this repository using [eslint](http://eslint.org/). You can install a linting addon to a lot of editors and IDEs that will follow our linting rules.
 
-If you decide to not install a linter addon, or cannot, you can run `npm run lint` to get a report of any style issues. Any issues not fixed will be caught during CI, and will prevent merging.
+If you decide to not install a linter addon, or cannot, you can run `yarn run lint` to get a report of any style issues. Any issues not fixed will be caught during CI, and will prevent merging.
 
 ## Commit Message Guidelines
 
 We use commit message guidelines based on the [Angular Commit Conventions](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit), using `Commitizen` as a CLI wizard to walk developers through writing their commit message.
 
-This CLI wizard can either be installed by the developer to the global `npm` scope by running `npm i -g commitizen`, or it can be used as a dev dependency on this project by running `npm run commit`.
+This CLI wizard can either be installed by the developer to the global `npm` scope by running `yarn i -g commitizen`, or it can be used as a dev dependency on this project by running `yarn run commit`.
 
 After the commit message has been submitted, it is checked by [`husky`](https://www.npmjs.com/package/husky) and [`commitlint`](https://www.npmjs.com/package/commitlint) to ensure it is syntactically correct.
 
@@ -138,23 +138,23 @@ Test your changes by running our test commands:
 * Run linting:
 
   ```
-  npm run lint
+  yarn run lint
   ```
 
 * Run unit tests:
 
   ```
-  npm test
+  yarn test
   ```
 
 * Watching unit tests:
 
   ```
-  npm test -- --watch
+  yarn test -- --watch
   ```
 
 * Generate code coverage report (stored in .gh-pages/coverage folder):
 
   ```
-  npm test -- --coverage
+  yarn test -- --coverage
   ```
