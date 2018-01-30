@@ -1,0 +1,22 @@
+$css--font-face: true;
+$css--reset: true;
+
+@import '~carbon-components/scss/globals/scss/styles.scss';
+@import './prism.scss';
+@import '../src/globals/scss/_vars.scss';
+@import '../src/globals/scss/_mixins.scss';
+@import '../src/globals/scss/_page.scss';
+@import '../src/components/CodeExample/code-example.scss';
+@import '../src/components/CodePage/code-page.scss';
+@import '../src/components/ComponentExample/component-example.scss';
+@import '../src/components/ComponentExample/component-overrides.scss';
+@import '../src/components/PageHeader/page-header.scss';
+@import '../src/components/RootPage/root-page.scss';
+@import '../src/components/SideNav/side-nav.scss';
+@import '../src/components/SideNav/side-nav-toggle.scss';
+
+.preview-container {
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+}
